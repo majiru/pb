@@ -1,0 +1,21 @@
+pb - A simple progress bar
+
+Usage:
+$ pb inputfd target
+
+inputfd is defined as a file(usually a processes fd) that will periodically output
+the progress status on stdout. This is compared to the target value and displayed.
+
+The character 'q' can be pressed while the program is open to exit prematurely.
+
+Example:
+$ pb <(
+    echo 10
+    sleep 1
+    echo 20
+    sleep 1
+    echo 40
+    sleep 1
+    echo 50
+) 50
+
